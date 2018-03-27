@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1.添加移动端的视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买---钟秋兰-二</title>
+    <!-- 2.引入站点图标 -->
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
+    <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
+    <!-- 样式在head里面引入 -->
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <!-- 2.引人mui的样式文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/goodBrand.css">
+    <script src="./lib/mui/js/mui.js"></script>
+</head>
+
+<body>
+    <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+
+            <!-- 头部区域  -->
+            <header id="header">
+                <a href="#" class="logo">
+                    <img src="./images/header_logo.png" alt="" />
+                </a>
+                <a href="#" class="download">
+                    <img src="./images/header_app.png" alt="app下载" />
+                </a>
+            </header>
+            <section id="search">
+                <input type="text" placeholder="请输入你想比价的商品">
+                <button class="btn">搜索</button>
+            </section>
+            <section id="nav">
+                <ul>
+                    <li class="f-l">
+                        <a href="#">首页</a>
+                        <span class="sep">></span>
+                    </li>
+                    <li class="f-l">
+                        <a href="#">品牌大全</a>
+                        <span class="sep">></span>
+                    </li>
+                    <li class="f-l">
+                        <a href="#" id="nav-brand">平板电视哪个牌子好</a>
+                    </li>
+                </ul>
+            </section>
+            <!-- 主体部分 -->
+            <main id="main">
+                <div class="brand-sort">
+                    平板电视哪个牌子好
+                </div>
+                <div class="brand-list">
+                    <ul class="mui-table-view">
+                        <!-- <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;" class="mui-navigate-right">
+                                <img class="mui-media-object mui-pull-left" src="../images/gengduo.png">
+                                <div class="mui-media-body">
+                                    幸福
+                                    <p class='mui-ellipsis'>30天全网销量：
+                                        <span>789999</span>件</p>
+                                </div>
+                            </a>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </main>
+            <!-- 底部区域 -->
+            <footer id="footer">
+                <div class="footer-nav">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#" class="fa fa-arrow-up ">返回顶部</a>
+                        </div>
+                        <div class="mui-col-xs-12 footer-content">
+                            <p class="title">
+                                <a href="#" class="app">手机app下载</a>
+                                <a href="#" class="icon">慢慢买手机版</a>
+                                <span> -- 掌上比价平台</span>
+                            </p>
+                            <p class="address">m.manmanbuy.com</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/html" id="BrandTmp">
+        {{each result as value i}}
+        <li class="mui-table-view-cell mui-media"data-brandTitleId="{{value.brandTitleId}}" data-brandname ="{{value.brandName}}">
+            <a href="javascript:;" class="mui-navigate-right">
+                <img class="mui-media-object mui-pull-left" src="./images/ic_pp.png">
+                <div class="mui-media-body">
+                    {{value.brandName}}
+                    <p class='mui-ellipsis'>{{value.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 4.引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 5.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/goodBrand.js"></script>
+
+</body>
+
+</html>

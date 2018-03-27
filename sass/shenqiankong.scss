@@ -1,0 +1,107 @@
+@import 'base.scss';
+#header{
+    .fa-arrow-left{
+        padding: 0 5px;
+        flex-basis: 50px;
+        line-height: 50px;
+        color: white;
+        left: 10px;
+
+    }
+    h3{
+        position: absolute;
+        top: 0;
+        line-height: 36px;
+        color: white;
+        left: 27%;
+        margin-top: 7px;
+
+       
+        
+       
+    }
+    .download{
+        >img{
+            line-height: 50px;
+            position: absolute;
+            right: 10px;
+           top: 8px;
+        }
+    }
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+}
+#main{
+    padding-bottom: 100px;
+    // 商品列表样式 
+    .productlist{
+    .table-view{
+        >li{
+            height: 128px;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            >a{
+                img{
+                    padding: 10px;
+                    width: 100px;
+                    height: 100px;
+                }
+                
+                }
+                .detail{
+                    position: absolute;
+
+                    padding: 10px;
+                    left: 100px;
+                    right: 0;
+                    top:0;
+                    .product-name{
+                        font-size: 14px;
+                    }
+                    .product-pic{
+                        color: #ff9f22;
+                        font-size: 14px;
+                    }
+                    .product-from{
+                        position: absolute;
+
+                        margin-top: 20px;
+                        
+                        font-size: 12px;
+                        color: #999;
+                    }
+                    .product-time{
+                        position: absolute;
+
+                        padding-top: 20px;
+                        margin-left: 60px;
+                    font-size: 12px;
+                    color: #999;
+                    }
+                    
+                    .product-num{
+                        font-size: 14px;
+                        position: absolute;
+                        margin-top: 20px;
+                        right: 10px;
+                        color: #ccc;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .mui-content-padded{
+        >ul{
+            >li{
+               >a{
+                &.active{
+                    background-color: #ccc;
+                }
+               }
+            }
+        }
+    }
+}

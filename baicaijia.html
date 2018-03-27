@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1.添加移动端的视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买第五部分</title>
+    <!-- 2.引入站点图标 -->
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
+    <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
+    <!-- 样式在head里面引入 -->
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!-- 2.引人mui的样式文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+    <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
+
+    <header id="header">
+        <a href="index.html" class="fa fa-chevron-left header-left">
+        </a>
+        <span class="header-paly">
+            白菜价-淘宝内部券
+        </span>
+        <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap" class="download header-bottom">
+            <img src="./images/header_app.png" alt="app下载" />
+        </a>
+    </header>
+
+    <div class="mui-scroll-wrapper up-scroll">
+        <div class="mui-scroll">
+            <main id="main">
+                <!-- 轮播图部分 -->
+                <div id="slider" class="mui-slider">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?key=%E9%98%B2%E6%99%92%E5%96%B7%E9%9B%BE">
+                                <img src="./images/bo3.jpg">
+                            </a>
+                        </div>
+                        <!-- 第一张 -->
+                        <div class="mui-slider-item mui-active">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?key=%E5%84%BF%E7%AB%A5">
+                                <img src="./images/bo1.jpg">
+                            </a>
+                        </div>
+                        <!-- 第二张 -->
+                        <div class="mui-slider-item">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?key=%E5%8C%BB%E7%94%A8%E6%A3%89">
+                                <img src="./images/bo2.jpg">
+                            </a>
+                        </div>
+                        <!-- 第三张 -->
+                        <div class="mui-slider-item">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?key=%E9%98%B2%E6%99%92%E5%96%B7%E9%9B%BE">
+                                <img src="./images/bo3.jpg">
+                            </a>
+                        </div>
+                        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?key=%E5%84%BF%E7%AB%A5">
+                                <img src="./images/bo1.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+                <!-- 图标跳转页 -->
+                <div class="font-skip mui-content">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-3">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?cat=hot" class="child-first">
+                                <i class="fa fa-fire"></i>
+                            </a>
+                            <span>热销</span>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?cat=9p9" class="child-second">
+                                <i class="fa fa-truck"></i>
+                            </a>
+                            <span>9.9包邮</span>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="http://baicai.manmanbuy.com/m/list.aspx?cat=19p9" class="child-third">
+                                <i class="fa fa-gift"></i>
+                            </a>
+                            <span>19块邮</span>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="http://baicai.manmanbuy.com/m/hot.aspx" class="child-forth">
+                                <i class="fa fa-line-chart"></i>
+                            </a>
+                            <span>人气榜</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="nav-classify">
+                    <div class="mui-content">
+                        <div class="mui-row">
+
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section id="productGurp">
+                    <div class="mui-content">
+
+                    </div>
+                </section>
+                <section id="bottomFet">
+                    <div class="mui-content">
+                        <div class="mui-row">
+                            <div class="mui-col-xs-4">
+                                <a href="#">登录</a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#">注册</a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#" class="fa fa-arrow-up ">返回顶部</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="til-bar">
+                        <a href="#">手机app下载</a>
+                        <a href="#">慢慢买手机版</a>
+                        <a href="#"> -- 掌上比价平台</a>
+                        <a href="#">m.manmanbuy.com</a>
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/html" id="topCategoryTmp">
+        {{each result as value i}}
+        <div class="mui-col-xs-2" data-id="{{value.titleId}}">
+            <a href="#">
+                {{value.title}}
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="productlistTmp">
+        {{each result as value i}}
+        <div class="mui-row">
+            <span class="mui-col-xs-4">
+                {{#value.productImg}}
+            </span>
+            <div class="mui-col-xs-8">
+                <span class="commodity">
+                    {{#value.productName}}
+                </span>
+                <p class="price">
+                    {{#value.productPrice}}
+                </p>
+
+
+                <div class="indication">
+                    {{#value.productCouponRemain}}
+                </div>
+
+
+                <div class="favourable">
+                    <a href="#">{{#value.productCoupon}}</a>
+                    <a heef="#">{{#value.productHref}}</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </script>
+
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3.引入mui的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 4.引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 5.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/baicaijia.js"></script>
+
+</body>
+
+</html>

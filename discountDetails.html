@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣详情页面</title>
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="./css/discountDetails.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    
+</head>
+<body>
+    <header id="header">
+        <div class="mui-row">
+            <div class="mui-col-xs-2">
+                <a href="javascript:history.go(-1)" class="mui-icon mui-icon-back"></a>
+            </div>
+            <div class="mui-col-xs-8">
+                <h1>国内折扣详情</h1>
+            </div>
+            <div class="mui-col-xs-2">
+                <a href="#" class="mui-icon mui-icon-download
+                 "></a>
+            </div>
+        </div>
+    </header>
+    <!-- <header id="header">
+        <a href="#" class="logo">
+            <img src="../images/header_logo.png" alt=""/>
+        </a>
+        <a href="#" class="download">
+            <img src="../images/header_app.png" alt="app下载"/>
+        </a>
+    </header> -->
+    <main id="main">
+        <div class="mui-row">
+            <!-- 商品详情 -->
+            <div class="mui-col-xs-12 details">
+                <div class="content">
+                    <h3 class="title">Haier 海尔 BCD-458WDVMU1 对开门冰箱 458升</h3>
+                    <h4 class="price">4299元</h4>
+                    <div class="info">
+                        <a href="#" class="small">京东商城</a>
+                        <span class="time">03-25 11:56</span>
+                        <span class="author">30+00 / 慢慢买</span>
+                    </div>
+                    <!-- <ul class="coon">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-right" src="../images/2.jpg">
+                                <div class="mui-media-body">
+                                    <p class='mui-ellipsis'>26日0点特价4899元，使用商品页面领取的4000减600优惠券，到手4299元，晒单后咨询客服再送488元煎炒锅，感兴趣可以关注</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <div class="btn"><a href="#" class="mui-btn mui-btn-warning btn-buy">前往购买</a></div>
+                </div>
+            </div>
+            <!-- 发表评论 -->
+            <!-- <div class="mui-col-xs-12 comment"> -->
+                <!-- <div class="tit">发表评论</div>
+                <div class="form-pl">
+                    <textarea class="get-comment" name="" id="" cols="30" rows="5">
+                        
+                    </textarea>
+                    <a href="javascript:void(0);" class="mui-btn mui-btn-warning btn-comment">发表评论</a>
+                </div>
+                <div class="tit">最新评论</div>
+                <div class="form-pl">
+                    <textarea class="new-comment" name="" id="" cols="30" rows="5">
+                        
+                    </textarea> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            
+        </div>
+    </main>
+    <!-- 创建商品详情模板 -->
+    <script type="text/html" id="productDetailsTmp">
+        {{each result as value i}}
+            <h3 class="title">{{value.productName}}</h3>
+            <h4 class="price">{{value.productPrice}}</h4>
+            <div class="info">
+                <a href="#" class="small">{{value.productFrom}}</a>
+                <span class="time">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <ul class="coon">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-right" {{#value.productImg}}
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>{{value.productInfo}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="btn"><a href="#" class="mui-btn mui-btn-warning btn-buy">前往购买</a></div>
+            <div class="comment">
+                <!-- 评论动态生成 -->
+                {{#value.productComment}}
+            </div>
+        {{/each}}
+    </script>
+    <!-- 创建评论模板 -->
+
+            <!-- <div class="tit">发表评论</div>
+            <div class="form-pl">
+                <textarea name="" id="" cols="30" rows="5">
+                </textarea>
+                
+                <a href="javascript:void(0);" class="mui-btn mui-btn-warning btn-comment">发表评论</a>
+            </div>
+            <div class="tit">最新评论</div>
+            <div class="form-pl">
+                <textarea name="" id="" cols="30" rows="5">
+                    
+                </textarea>
+            </div>    -->
+        
+
+    <!-- 底部结构 -->
+    <footer id="footer">
+        <div class="footer-nav">
+            <div class="mui-row">
+                <div class="mui-col-xs-4"><a href="#">登录</a></div>
+                <div class="mui-col-xs-4"><a href="#">注册</a></div>
+                <div class="mui-col-xs-4"><a href="#"><img src="./images/top.jpg" alt="">返回顶部</a></div>
+                <div class="mui-col-xs-12 footer-content">
+                    <p class="title">
+                        <a href="#" class="app">手机app下载</a>
+                        <a href="#" class="icon">慢慢买手机版</a>
+                        <span> -- 掌上比价平台</span>
+                    </p>
+                    <p class="address">m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 引入js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/discountDetails.js"></script>
+</body>
+</html>

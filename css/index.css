@@ -1,0 +1,254 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+input {
+  border: none;
+  -webkit-appearance: none;
+  outline: none; }
+
+.f-l {
+  float: left; }
+
+.f-r {
+  float: right; }
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.cover::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center, #DEE4E4;
+  z-index: 30; }
+
+.loading::before {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  top: changeSize(-120rem); }
+
+.loading::after {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  bottom: changeSize(-120rem); }
+
+a, a:visited {
+  text-decoration: none; }
+
+#header {
+  background: #ff841d;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6; }
+  #header .logo {
+    height: 34px;
+    float: left;
+    display: block;
+    padding: 12px; }
+    #header .logo > img {
+      max-height: 25px; }
+  #header .download {
+    float: right;
+    height: 34px;
+    padding: 12px; }
+    #header .download > img {
+      max-height: 34px; }
+
+#footer {
+  background-color: #efefef;
+  z-index: 999;
+  margin-bottom: 0;
+  width: 100%; }
+  #footer .footer-nav .mui-row .mui-col-xs-4 > a {
+    font-size: 14px;
+    color: #5a5a5a;
+    display: block;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; }
+    #footer .footer-nav .mui-row .mui-col-xs-4 > a > img {
+      width: 15px;
+      height: 15px; }
+  #footer .footer-content {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px 0px; }
+    #footer .footer-content .title {
+      margin: 0; }
+      #footer .footer-content .title .app {
+        font-size: 12px;
+        color: red; }
+      #footer .footer-content .title .icon {
+        font-size: 12px;
+        color: #5a5a5a; }
+      #footer .footer-content .title span {
+        font-size: 12px;
+        color: #5a5a5a; }
+    #footer .footer-content .address {
+      font-size: 12px;
+      color: #5a5a5a;
+      margin: 0; }
+
+#main {
+  background-color: white; }
+  #main #search {
+    position: relative;
+    height: 50px;
+    background-color: #fff;
+    bottom: 0; }
+    #main #search .search-text {
+      padding: 10px; }
+      #main #search .search-text > input {
+        width: 90%;
+        line-height: 50px;
+        height: 30px;
+        color: #855;
+        border-radius: 50px; }
+    #main #search .search-input > input {
+      background-color: #ff841d;
+      position: absolute;
+      width: 18%;
+      height: 30px;
+      line-height: 50px;
+      border-radius: 50px;
+      color: black;
+      text-align: center;
+      right: 10px;
+      top: 10px; }
+  #main #nav-category {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    #main #nav-category .mui-row {
+      width: 100%; }
+      #main #nav-category .mui-row > div {
+        width: 25%;
+        height: 100px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #main #nav-category .mui-row > div > a {
+          width: 50px;
+          height: 50px; }
+          #main #nav-category .mui-row > div > a > img {
+            height: 100%; }
+          #main #nav-category .mui-row > div > a > p {
+            font-size: 12px;
+            text-align: center; }
+        #main #nav-category .mui-row > div.hide {
+          display: none; }
+  #main #recomment {
+    padding-top: 20px; }
+    #main #recomment .product-recomment {
+      padding: 0 10px;
+      height: 36px;
+      background-color: #ff9f22; }
+      #main #recomment .product-recomment .tuijian {
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+        line-height: 36px; }
+      #main #recomment .product-recomment .arrow {
+        float: right;
+        color: white;
+        line-height: 36px; }
+    #main #recomment .productlist .table-view > li {
+      height: 110px;
+      position: relative;
+      border-bottom: 1px solid #ccc; }
+      #main #recomment .productlist .table-view > li > a img {
+        padding: 10px;
+        width: 100px;
+        height: 100px; }
+      #main #recomment .productlist .table-view > li .detail {
+        position: absolute;
+        padding: 10px;
+        left: 100px;
+        right: 0;
+        top: 0; }
+        #main #recomment .productlist .table-view > li .detail .product-name {
+          font-size: 14px; }
+        #main #recomment .productlist .table-view > li .detail .product-pic {
+          color: #ff9f22; }
+        #main #recomment .productlist .table-view > li .detail .product-from {
+          position: absolute;
+          margin-top: 20px;
+          font-size: 12px;
+          color: #999; }
+        #main #recomment .productlist .table-view > li .detail .product-time {
+          position: absolute;
+          margin-top: 20px;
+          margin-left: 70px;
+          font-size: 12px;
+          color: #999; }
+        #main #recomment .productlist .table-view > li .detail .product-num {
+          font-size: 14px;
+          position: absolute;
+          margin-top: 20px;
+          right: 10px;
+          color: #ccc; }
+  #main #more .new {
+    height: 32px;
+    background-color: #f2f2f2;
+    margin: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 32px; }
+    #main #more .new > a {
+      color: black;
+      font-size: 12px; }
+    #main #more .new > span {
+      font-size: 12px; }
+  #main #product-top .product-recomment {
+    padding: 0 10px;
+    height: 36px;
+    background-color: #ff9f22; }
+    #main #product-top .product-recomment .tuijian {
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      line-height: 36px; }
+    #main #product-top .product-recomment .arrow {
+      float: right;
+      color: white;
+      line-height: 36px; }
+
+/*# sourceMappingURL=index.css.map */

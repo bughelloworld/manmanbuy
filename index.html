@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1.添加移动端的视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买---手机端主页李浩</title>
+    <!-- 2.引入站点图标 -->
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
+    <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
+    <!-- 样式在head里面引入 -->
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!-- 2.引人mui的样式文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/Animate/animate.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/mui/js/mui.js"></script>
+</head>
+
+<body>
+    <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
+    <!-- 头部区域  -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="./images/header_logo.png" alt=""/>
+        </a>
+        <a href="#" class="download">
+            <img src="./images/header_app.png" alt="app下载"/>
+        </a>
+    </header>
+
+    <!-- 主体部分 -->
+    <main id="main">
+        <!-- 搜索的部分 -->
+        <section id="search">
+            <div class="search-text">
+                <input type="text" placeholder="请输入搜索的商品">
+            </div>
+            <div class="search-input">
+                <input type="text" value="搜索">
+            </div>
+        </section>
+        <!-- 轮播图的区域 -->
+        <section id="slide">
+            <!-- mui轮播图插件的大容器 -->
+            <div id="slider" class="mui-slider">
+                <!-- 轮播图的图片容器 -->
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="./images/4.png">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="./images/1.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="./images/2.png">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="./images/3.png">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="./images/4.png">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播)  除了要多放2张图 第一张和最后一张重复的轮播图还需要添加重复的类名-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="./images/1.jpg">
+                        </a>
+                    </div>
+                </div>
+                <!-- 轮播图小圆点容器  注意小圆点容器要在轮播图容器旁边-->
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 导航区域 -->
+        <section id="nav-category">
+            <div class="mui-row  animated fadeInLeft" id="dowebok">
+                <div class="mui-col-xs-3">
+                    <a href="ParitySearch.html">
+                        <img src="./images/ic_coudanpin.png" alt="">
+                        <p>比价搜索</p>
+                    </a> 
+                </div>
+            </div>
+        </section>
+        <!-- 商品推荐 -->
+        <section id="recomment">
+            <!-- 商品推荐导航 -->
+            <div class="product-recomment">
+                <span class="tuijian">超值折扣推荐</span>
+                <span class="fa fa-chevron-circle-right arrow"></span>    
+            </div>
+            <!-- 商品列表区域 -->
+            <div class="productlist">
+                <ul class="table-view">
+                    <li class="product-list">
+                        <a href="#">
+                            <img src="./images/product1.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <span class="product-name">
+                                移动端凑单品：海天 鲜味 生抽 1.28L
+                            </span>
+                            <span class="product-pic">10.9元</span>
+                            <br>
+                            <span class="product-from">
+                                京东商城 |
+                            </span>
+                            <span class="product-time">
+                                    10-25 14:10
+                            </span>
+                            <span class="product-num">
+                                有1人评论
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 更多区域 -->
+        <section id="more">
+            <div class="new">
+                <a href="./moneyctrl.html">更多优惠信息</a><span>>></span>
+            </div>
+        </section>
+        <!-- 品牌商品 -->
+        <section id="product-top">
+            <!--  商品品牌排行 --> 
+            <div class="product-recomment">
+                <span class="tuijian">商品排行</span>
+                <span class="fa fa-chevron-circle-right arrow"></span>    
+            </div>
+        </section>
+    </main>
+   
+
+    <!-- 底部区域 -->
+     <footer id="footer">
+        <div class="footer-nav">
+            <div class="mui-row">
+                <div class="mui-col-xs-4"><a href="#">登录</a></div>
+                <div class="mui-col-xs-4"><a href="#">注册</a></div>
+                <div class="mui-col-xs-4"><a href="#" class="fa fa-arrow-up ">返回顶部</a></div>
+                <div class="mui-col-xs-12 footer-content">
+                    <p class="title">
+                        <a href="#" class="app">手机app下载</a>
+                        <a href="#" class="icon">慢慢买手机版</a>
+                        <span> -- 掌上比价平台</span>
+                    </p>
+                    <p class="address">m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 创建菜单导航模板 -->
+    <script type="text/html" id="navTmp">
+        {{each result as value i}}
+        <div class="mui-col-xs-3 {{i>7?'hide':''}}">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <!-- {{value.titlehref}} -->
+    <!-- 创建折扣商品列表模板 -->
+    <script type="text/html" id="productlistTmp">
+        {{each result as value i}}
+        <li class="product-list">
+                <a href="#">
+                    {{#value.productImgSm}}
+                </a>
+                <div class="detail">
+                    <span class="product-name">
+                        {{value.productName}}
+                    </span>
+                    <span class="product-pic">
+                       {{value.productPinkage}}
+                    </span>
+                    <br>
+                    <span class="product-from">
+                       {{value.productFrom}} |
+                    </span>
+                    <span class="product-time">
+                           {{value.productTime}}
+                    </span>
+                    <span class="product-num">
+                        {{value.productComCount}}
+                    </span>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 4.引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 5.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+input {
+  border: none;
+  -webkit-appearance: none;
+  outline: none; }
+
+.f-l {
+  float: left; }
+
+.f-r {
+  float: right; }
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.cover::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center, #DEE4E4;
+  z-index: 30; }
+
+.loading::before {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  top: changeSize(-120rem); }
+
+.loading::after {
+  content: '';
+  width: 100%;
+  height: changeSize(120rem);
+  position: absolute;
+  background: url("../img/03.loading/loading.gif") no-repeat center/changeSize(60rem) changeSize(60rem);
+  bottom: changeSize(-120rem); }
+
+a, a:visited {
+  text-decoration: none; }
+
+#header {
+  background: #ff841d;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6; }
+  #header .logo {
+    height: 34px;
+    float: left;
+    display: block;
+    padding: 12px; }
+    #header .logo > img {
+      max-height: 25px; }
+  #header .download {
+    float: right;
+    height: 34px;
+    padding: 12px; }
+    #header .download > img {
+      max-height: 34px; }
+
+#footer {
+  background-color: #efefef;
+  z-index: 999;
+  margin-bottom: 0;
+  width: 100%; }
+  #footer .footer-nav .mui-row .mui-col-xs-4 > a {
+    font-size: 14px;
+    color: #5a5a5a;
+    display: block;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; }
+    #footer .footer-nav .mui-row .mui-col-xs-4 > a > img {
+      width: 15px;
+      height: 15px; }
+  #footer .footer-content {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px 0px; }
+    #footer .footer-content .title {
+      margin: 0; }
+      #footer .footer-content .title .app {
+        font-size: 12px;
+        color: red; }
+      #footer .footer-content .title .icon {
+        font-size: 12px;
+        color: #5a5a5a; }
+      #footer .footer-content .title span {
+        font-size: 12px;
+        color: #5a5a5a; }
+    #footer .footer-content .address {
+      font-size: 12px;
+      color: #5a5a5a;
+      margin: 0; }
+
+#header .fa-arrow-left {
+  padding: 0 5px;
+  -webkit-flex-basis: 50px;
+      -ms-flex-preferred-size: 50px;
+          flex-basis: 50px;
+  line-height: 50px;
+  color: white;
+  left: 10px; }
+#header h3 {
+  position: absolute;
+  top: 0;
+  line-height: 36px;
+  color: white;
+  left: 27%;
+  margin-top: 7px; }
+#header .download > img {
+  line-height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 8px; }
+
+#footer {
+  position: fixed;
+  bottom: 0; }
+
+#main {
+  padding-bottom: 100px; }
+  #main .productlist .table-view > li {
+    height: 128px;
+    position: relative;
+    border-bottom: 1px solid #ccc; }
+    #main .productlist .table-view > li > a img {
+      padding: 10px;
+      width: 100px;
+      height: 100px; }
+    #main .productlist .table-view > li .detail {
+      position: absolute;
+      padding: 10px;
+      left: 100px;
+      right: 0;
+      top: 0; }
+      #main .productlist .table-view > li .detail .product-name {
+        font-size: 14px; }
+      #main .productlist .table-view > li .detail .product-pic {
+        color: #ff9f22;
+        font-size: 14px; }
+      #main .productlist .table-view > li .detail .product-from {
+        position: absolute;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #999; }
+      #main .productlist .table-view > li .detail .product-time {
+        position: absolute;
+        padding-top: 20px;
+        margin-left: 60px;
+        font-size: 12px;
+        color: #999; }
+      #main .productlist .table-view > li .detail .product-num {
+        font-size: 14px;
+        position: absolute;
+        margin-top: 20px;
+        right: 10px;
+        color: #ccc; }
+  #main .mui-content-padded > ul > li > a.active {
+    background-color: #ccc; }
+
+/*# sourceMappingURL=shenqiankong.css.map */

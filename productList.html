@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1.添加移动端的视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买---手机端</title>
+    <!-- 2.引入站点图标 -->
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
+    <!-- 1.引包先引入第三方的包  如果有依赖要先引入依赖在引入不依赖 -->
+    <!-- 样式在head里面引入 -->
+    <!-- 1.引入字体图标的样式文件 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!-- 2.引人mui的样式文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/productList.css">
+</head>
+
+<body>
+    <!--先把页面的大结构划分好，每个大块最外层选择器尽量id选择器 id样式优先级高 方便覆盖一些框架的样式 可以更明显的区分代码的功能块  -->
+    
+
+
+        <!-- 头部 -->
+        <header id="header">
+            <a href="#" class="logo">
+                <img src="./images/header_logo.png" alt="" />
+            </a>
+            <a href="#" class="download">
+                <img src="./images/header_app.png" alt="app下载" />
+            </a>
+        </header>
+
+        <div class="container">
+
+              <!-- 区域滚动的父容器 -->
+    <div class="mui-scroll-wrapper">
+        <!-- 区域滚动的子容器 -->
+        <div class="mui-scroll">
+        <!-- 内容主体 -->
+        <main id="main">
+            <!-- 搜索框 -->
+            <div class="searchBar">
+                <div class="searchText">
+                   <input type="search" class="search-input" placeholder="请输入你想比价的商品"> 
+                </div>
+                <div class="searchBtn">
+                    <input href="button" class="btn-search" value="搜索">
+                </div>
+                
+                
+            </div>
+
+            <!-- 商品列表 -->
+            <div class="productList-title">
+                <div class="mui-row">
+                    <ul >
+                        <li class="mui-col-xs-3">
+                            <a href="#">综合</a>
+                        </li>
+                        <li class="mui-col-xs-3">
+                            <a href="#">销量</a>
+                        </li>
+                        <li class="mui-col-xs-3">
+                            <a href="#">价格</a>
+                        </li>
+                        <li class="mui-col-xs-3">
+                            <a href="#" class="">筛选</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="productList-content">
+                <ul>
+                    <li class="Product-item">
+                        <a href="http://m.manmanbuy.com/bijia.aspx?id=567342" class="goto"></a>
+                        <div class="pic">
+                            <!-- <img src="http://pro-img.zuyushop.com/ProPic/20179/small80/Thumb_2017090009093869967eeeee.jpg" alt="海信(Hisense) LED32EC300D 32英寸 高清 智能液晶电视"> -->
+                        </div>
+                        <div class="clearfix inf">
+                            <div class="tit">海信(Hisense) LED32EC300D 32英寸 高清 智能液晶电视</div>
+                            <div class="price">
+                                <em>¥</em>959</div>
+                            <div class="other">
+                                <div class="mall">7商城报价</div>
+                                <div class="sales">有1908人评论</div>
+                            </div>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+
+      
+        </main>
+        </div>
+        </div>
+        </div>
+                 <!-- 底部区域 -->
+<footer id="footer">
+    <div class="footer-nav">
+        <div class="mui-row">
+            <div class="mui-col-xs-4">
+                <a href="#">登录</a>
+            </div>
+            <div class="mui-col-xs-4">
+                <a href="#">注册</a>
+            </div>
+            <div class="mui-col-xs-4">
+                <a href="#" class="fa fa-arrow-up ">返回顶部</a>
+            </div>
+            <div class="mui-col-xs-12 footer-content">
+                <p class="title">
+                    <a href="#" class="app">手机app下载</a>
+                    <a href="#" class="icon">慢慢买手机版</a>
+                    <span> -- 掌上比价平台</span>
+                </p>
+                <p class="address">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/html" id="getproductTmp">
+    {{each result as value i}}
+    <li class="Product-item" data-id='{{value.productId}}'>
+        <a href="productxiangqin.html?productId={{value.productId}}" class="goto" data-id="{"></a>
+        <div class="pic">
+            {{#value.productImg}}
+        </div>
+        <div class="clearfix inf">
+            <div class="tit">{{value.productName}}</div>
+            <div class="price">
+                <em>¥</em>{{value.productPrice}}</div>
+            <div class="other">
+                <div class="mall">{{value.productQuote}}</div>
+                <div class="sales">{{value.productCom}}</div>
+            </div>
+        </div>
+    </li>
+    
+    {{/each}}
+
+</script>
+        
+
+
+
+ 
+    <!-- js在body结束标签的上面引入 -->
+    <!-- 3.引入mui的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 4.引入zepto的js文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 5.引入模板引擎的js文件 -->
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/productList.js"></script>
+
+</body>
+
+</html>
