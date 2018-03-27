@@ -276,10 +276,11 @@ html, body {
                   background-color: #fc353a; }
 
 #bottomFet {
-  position: fixed;
+  position: relative;
   bottom: 0px;
   left: 0px;
-  z-index: 999; }
+  z-index: 999;
+  }
   #bottomFet .mui-content .mui-row {
     width: 100%;
     border: 1px solid #666; }
